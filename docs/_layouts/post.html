@@ -4,37 +4,66 @@ layout: default
 
 
 <section class="post">
-  <div class="flex-row-between">
-	  <a href="{{ site.url }}{{ site.baseurl }}/">« back</a>
-    <button title="Change theme" id="theme-toggle" onclick="modeSwitcher()">
-      <div></div>
-    </button>
-  </div>
-  {% assign minute=content | number_of_words | divided_by: 265 | plus: 1 %}
-  <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }} -
-    {% if page.minute %} {{ page.minute }} {% else %} {{ minute }} {% endif %}' read</time>
-  <h1 class="title">{{ page.title }}</h1>
-  <span class="meta">
+    <div class="flex-row-between">
+        <a href="{{ site.url }}{{ site.baseurl }}/">« back</a>
+        <button title="Change theme" id="theme-toggle" onclick="modeSwitcher()">
+            <div></div>
+        </button>
+    </div>
+    <div class="flex-row-between" style="margin-top: 3rem; margin-bottom: 0;">
+        {% assign minute=content | number_of_words | divided_by: 265 | plus: 1 %}
+        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }} -
+            {% if page.minute %} {{ page.minute }} {% else %} {{ minute }} {% endif %}' read
+        </time>
+        {% if page.example %}
+        <a href="{{ page.example }}">Source <i class="fa fa-github" aria-hidden="true"></i></a>
+        {% endif %}
+    </div>
+    <h1 class="title">{{ page.title }}</h1>
+    <span class="meta">
     {% for tag in page.tags %}
     <a href="{{ site.url }}{{ site.baseurl }}/tag/{{tag}}">{{tag}}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}</span>
-  {{ content }}
+    {% if page.series %}
+    {% assign series = site.series | where:"slug", page.series | first %}
+    <p>{{ series.content }}</p>
+    <ol type="1">
+        {% assign sorted = site.posts | sort: 'date' %}
+        {% for post in sorted %}
+        {% assign postSeries = "/series/" | append: post.series %}
+        {% if series.id contains postSeries %}
+        <li>
+            {% if post.url != page.url %}
+            <a class="post" href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+            {% endif %}
+            {% if post.url == page.url %}
+            <span class="post">{{ post.title }} (this post)</span>
+            {% endif %}
+        </li>
+        {% endif %}
+        {% endfor %}
+    </ol>
+    <p>
+        {{ page.series-description }}
+    </p>
+    {% endif %}
+    {{ content }}
 </section>
 
 <section>
 
-  <nav class="post-nav">
-    {% if page.previous %}
-    <a class="post-nav-item post-nav-prev" href="{{ page.previous | relative_url }}">
-      <div class="nav-arrow">Previous</div>
-      <span class="post-title">{{ page.previous.title }}</span>
-    </a>
-    {% endif %} {% if page.next %}
-    <a class="post-nav-item post-nav-next" href="{{ page.next | relative_url }}">
-      <div class="nav-arrow">Next</div>
-      <span class="post-title">{{ page.next.title }}</span>
-    </a>
-    {% endif %}
+    <nav class="post-nav">
+        {% if page.previous %}
+        <a class="post-nav-item post-nav-prev" href="{{ page.previous | relative_url }}">
+            <div class="nav-arrow">Previous</div>
+            <span class="post-title">{{ page.previous.title }}</span>
+        </a>
+        {% endif %} {% if page.next %}
+        <a class="post-nav-item post-nav-next" href="{{ page.next | relative_url }}">
+            <div class="nav-arrow">Next</div>
+            <span class="post-title">{{ page.next.title }}</span>
+        </a>
+        {% endif %}
 
-  </nav>
+    </nav>
 </section>
 {% include disqus.html %}

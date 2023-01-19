@@ -1,27 +1,13 @@
 ---
 layout: post
 title:  "When microservices are not for you"
-description: This is a description
-summary: This is a summary
+description: This post covers when microservice architecture is not a good fit for a project.
 date:   2023-01-09 16:14:33 +0100
 tags: microservices opinion architecture
+series: microservice-architecture
+series-description: In this post I'll cover some cases when I think microservices are a bad fit for a project...
 example:
 ---
-
-Microservices are the hype right now and what everyone talks about. Microservices are an architectural and organizational approach to software development where software is
-composed of small independent services that communicate over well-defined APIs. These services are owned by small, self-contained teams. Microservices architectures make
-applications easier to scale and faster to develop, enabling innovation and accelerating time-to-market for new features. This is a commonly used solution for medium to large
-projects. While there are many benefits with microservices, there are also drawbacks because you enter the domain of distributed systems.
-
-Throughout the series I will cover few common topics and I hope to help you make some informed decisions going forward:
-
-1. When microservices are not for you (this post)
-2. [When microservices are a good fit]({% post_url 2023-01-10-microservices-are-a-good-fit %})
-3. [Microservices for new projects]({% post_url 2023-01-11-microservices-for-new-projects %})
-4. [Monolith to microservices]({% post_url 2023-01-12-monolith-to-microservices %})
-5. [Common pitfalls when doing microservices]({% post_url 2023-01-13-microservices-common-pitfalls %})
-
-In this post I'll cover some cases when I think microservices are a bad fit for a project...
 
 # Overview #
 

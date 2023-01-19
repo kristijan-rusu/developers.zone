@@ -1,30 +1,18 @@
 ---
 layout: post
 title:  "Common pitfalls when doing microservices"
+description: This post covers some of the most common pitfalls when developing microservices.
 date:   2023-01-13 16:16:33 +0100
 tags: microservices opinion architecture
-reading_time: 7
+series: microservice-architecture
+series-description: In this post I'll some pitfalls when doing microservices...
+example:
 ---
-
-Microservices are the hype right now and what everyone talks about. Microservices are an architectural and organizational approach to software development where software is
-composed of small independent services that communicate over well-defined APIs. These services are owned by small, self-contained teams. Microservices architectures make
-applications easier to scale and faster to develop, enabling innovation and accelerating time-to-market for new features. This is a commonly used solution for medium to large
-projects. While there are many benefits with microservices, there are also drawbacks because you enter the domain of distributed systems.
-
-Throughout the series I will cover few common topics and I hope to help you make some informed decisions going forward:
-
-1. [When microservices are not for you]({% post_url 2023-01-09-microservices-are-not-for-you %})
-2. [When microservices are a good fit]({% post_url 2023-01-10-microservices-are-a-good-fit %})
-3. [Microservices for new projects]({% post_url 2023-01-11-microservices-for-new-projects %})
-4. [Monolith to microservices]({% post_url 2023-01-12-monolith-to-microservices %})
-5. Common pitfalls when doing microservices (this post)
-
-In this post I'll some pitfalls when doing microservices...
 
 # Overview #
 
 You have decided that indeed microservices are the way to go for your project. You have set your eyes on a path that will accomplish the goal. You have reached the point of no
-return. You should know by know that the path to microservices is riddled will pitfalls and as is the way of software development, a lot of mistakes will be made, more so when
+return. You should know by now that the path to microservices is riddled will pitfalls and as is the way of software development, a lot of mistakes will be made, more so when
 transitioning to microservices. The way to microservices has a lot of pitfalls to avoid and most of them can not be foreseen, but few of them are common which you can plan
 beforehand to avoid them. Best I can do is to at least provide you information about the most common ones, what they mean and how to avoid them.
 
@@ -37,8 +25,8 @@ and everything else you can to manage those failures. It's false to assume that 
 ### Don't forget about the new network ###
 
 Easier said that done, don't forget about the network. I know it sounds stupid, but when developing monoliths, no-one cares about the network, everything is packaged in a single
-deployable and every method call is in the same application. In microservices, method calls will be actually requests from one service to other more thank you think so at the
-begging. This will introduce additional problems which will arise after deployment and are not visible on your computer.
+deployable and every method call is in the same application. With microservices, methods in the service layer will become network requests. This will introduce additional problems
+which will arise after deployment and are not visible on your local development environment.
 
 ### Stopping all development on the monolith ###
 

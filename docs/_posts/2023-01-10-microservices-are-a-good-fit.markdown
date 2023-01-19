@@ -1,33 +1,20 @@
 ---
 layout: post
 title:  "When microservices are a good fit"
+description: This post covers cases when microservice architecture is a good fit.
 date:   2023-01-10 16:14:33 +0100
 tags: microservices opinion architecture
-reading_time: 5
+series: microservice-architecture
+series-description: In this post I'll cover some cases when I think microservices are a good fit for a project...
+example:
 ---
-
-Microservices are the hype right now and what everyone talks about. Microservices are an architectural and organizational approach to software development where software is
-composed of small independent services that communicate over well-defined APIs. These services are owned by small, self-contained teams. Microservices architectures make
-applications easier to scale and faster to develop, enabling innovation and accelerating time-to-market for new features. This is a commonly used solution for medium to large
-projects. While there are many benefits with microservices, there are also drawbacks because you enter the domain of distributed systems.
-
-Throughout the series I will cover few common topics and I hope to help you make some informed decisions going forward:
-
-1. [When microservices are not for you]({% post_url 2023-01-09-microservices-are-not-for-you %})
-2. When microservices are a good fit (this post)
-3. [Microservices for new projects]({% post_url 2023-01-11-microservices-for-new-projects %})
-4. [Monolith to microservices]({% post_url 2023-01-12-monolith-to-microservices %})
-5. [Common pitfalls when doing microservices]({% post_url 2023-01-13-microservices-common-pitfalls %})
-
-In this post I'll cover some cases when I think microservices are a good fit for a project...
 
 # Overview #
 
 While we explored when you shouldn't do microservices in the previous [post]({% post_url 2023-01-09-microservices-are-not-for-you %}) in the series, there are cases when they are a
-good fit. My opinion is that the complexity and difficulties are warranted and that you will benefit from the architecture in these few cases. Keep in mind that it all comes down
-to an individual team and specific project. There is no silver bullet our there that will solve all your problems. There are multiple benefits of microservices, but to reap those
-benefits, it must fit your needs. Every architecture has its own pros and cons, and when the pros outweigh the cons, then that's the right architecture for your project. There
-actually a couple of good reasons to use the microservice architecture.
+good fit. My opinion is that the complexity and difficulties are warranted and that you will benefit from the architecture in these few cases. There are multiple benefits of
+microservices, but to reap those benefits, it must fit your needs. Every architecture has its own pros and cons, and when the pros outweigh the cons, then that's the right
+architecture for your project. There actually a couple of good reasons to use the microservice architecture.
 
 ### High-availability is a must ### 
 

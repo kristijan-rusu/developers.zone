@@ -73,6 +73,9 @@ collections:
   posts:
     output: true
     permalink: /:year/:month/:day/:slug
+  series:
+    output: true
+    permalink: /series/:slug
 
 defaults:
   - scope:
@@ -89,9 +92,15 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+  - scope:
+      path: ""
+      type: "series"
+    values:
+      layout: "series"
 
 relative_links:
   enabled: true
   collections: false
 
-
+seriesConfig:
+  enabled: false

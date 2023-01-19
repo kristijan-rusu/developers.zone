@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+
+<section class="post" style="padding-bottom: 0;">
+    <div class="flex-row-between">
+        <a href="{{ site.url }}{{ site.baseurl }}/">« back</a>
+        <button title="Change theme" id="theme-toggle" onclick="modeSwitcher()">
+            <div></div>
+        </button>
+    </div>
+    <h1 class="title" style="margin-top: 3rem;">{{ page.title }}</h1>
+    {{ content }}
+</section>
+
+<section class="posts" style="margin-top: 0; padding-top: 0;">
+    <ol type="1">
+        {% assign sorted = site.posts | sort: 'date' %}
+        {% for post in sorted %}
+        {% assign postSeries = "/series/" | append: post.series %}
+        {% if page.id contains postSeries %}
+        <li>
+            {% if post.url != page.url %}
+            <a class="post" href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+            {% endif %}
+            {% if post.url == page.url %}
+            <span class="post">{{ post.title }} (this post)</span>
+            {% endif %}
+        </li>
+        {% endif %}
+        {% endfor %}
+    </ol>
+</section>
+
+{% include disqus.html %}
