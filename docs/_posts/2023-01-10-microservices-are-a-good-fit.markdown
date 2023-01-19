@@ -14,7 +14,7 @@ example:
 While we explored when you shouldn't do microservices in the previous [post]({% post_url 2023-01-09-microservices-are-not-for-you %}) in the series, there are cases when they are a
 good fit. My opinion is that the complexity and difficulties are warranted and that you will benefit from the architecture in these few cases. There are multiple benefits of
 microservices, but to reap those benefits, it must fit your needs. Every architecture has its own pros and cons, and when the pros outweigh the cons, then that's the right
-architecture for your project. There actually a couple of good reasons to use the microservice architecture.
+architecture for your project. There are actually a couple of good reasons to use the microservice architecture.
 
 ### High-availability is a must ### 
 
