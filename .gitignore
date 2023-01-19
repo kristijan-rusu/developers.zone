@@ -1,4 +1,9 @@
-_site/
-.sass-cache/
-.jekyll-cache/
-.jekyll-metadata
+blog/vendor
+blog/.bundle
+
+blog/_site
+blog/.sass-cache/
+blog/.jekyll-cache/
+blog/.jekyll-metadata
+
+.idea/
