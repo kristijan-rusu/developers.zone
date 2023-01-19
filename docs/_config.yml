@@ -1,5 +1,3 @@
-
-
 site: developers.zone
 title: developers.zone
 greetings: developers.zone
@@ -42,13 +40,14 @@ kramdown:
 
 
 exclude:
-  - .jekyll-cache
-  - .obsidian
   - Gemfile
   - Gemfile.lock
-  - LICENSE.md
-  - README.md
-  - CONTRIBUTING.md
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - .jekyll-cache
 
 compress_html:
   clippings: all
@@ -59,7 +58,7 @@ sass:
   style: compressed
 
 plugins:
-  - jekyll-admin
+  #  - jekyll-admin
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
