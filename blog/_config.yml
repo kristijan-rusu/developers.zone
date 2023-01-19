@@ -1,3 +1,5 @@
+
+
 site: developers.zone
 title: developers.zone
 greetings: developers.zone
@@ -23,7 +25,8 @@ author:
 googlewebfonts: family=Play:wght@400;700&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,500;1,600;1,700;1,900
 
 # URL settings
-url: "https://developers.zone/" # Domain Name of host. [username].github.io for github pages
+domain: developers.zone
+url: https://developers.zone # Domain Name of host. [username].github.io for github pages
 baseurl:  # sub folder for jekyll site. only if jekyll site not in root of host. leave blank if not wishd. always add / in front.
 permalink: pretty
 
@@ -56,8 +59,12 @@ sass:
   style: compressed
 
 plugins:
-  - jekyll-paginate
+  - jekyll-admin
+  - jekyll-feed
   - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-archives
   - jekyll-relative-links
 
 collections:
