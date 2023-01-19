@@ -1,10 +1,10 @@
-blog/vendor
-blog/.bundle
+docs/vendor
+docs/.bundle
 
-blog/_site
-blog/.sass-cache/
-blog/.jekyll-cache/
-blog/.jekyll-metadata
+docs/_site
+docs/.sass-cache/
+docs/.jekyll-cache/
+docs/.jekyll-metadata
 
 .idea/
-blog.iml
+docs.iml
