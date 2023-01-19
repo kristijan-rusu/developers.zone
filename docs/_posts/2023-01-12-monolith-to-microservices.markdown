@@ -5,7 +5,7 @@ description: This post covers how to go about splitting a monolith to microservi
 date:   2023-01-12 16:15:33 +0100
 tags: microservices opinion architecture
 series: microservice-architecture
-series-description: In this post I'll cover few ways to transform existing monolith to microservices...
+series_description: In this post I'll cover few ways to transform existing monolith to microservices...
 example:
 ---
 

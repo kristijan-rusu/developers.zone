@@ -5,7 +5,7 @@ description: This post covers some of the most common pitfalls when developing m
 date:   2023-01-13 16:16:33 +0100
 tags: microservices opinion architecture
 series: microservice-architecture
-series-description: In this post I'll some pitfalls when doing microservices...
+series_description: In this post I'll some pitfalls when doing microservices...
 example:
 ---
 

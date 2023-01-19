@@ -25,7 +25,7 @@ layout: default
     <a href="{{ site.url }}{{ site.baseurl }}/tag/{{tag}}">{{tag}}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}</span>
     {% if page.series %}
     {% assign series = site.series | where:"slug", page.series | first %}
-    <p>{{ series.content }}</p>
+    {{ series.excerpt }}
     <ol type="1">
         {% assign sorted = site.posts | sort: 'date' %}
         {% for post in sorted %}
@@ -43,7 +43,7 @@ layout: default
         {% endfor %}
     </ol>
     <p>
-        {{ page.series-description }}
+        {{ page.series_description }}
     </p>
     {% endif %}
     {{ content }}

@@ -5,7 +5,7 @@ description: This post covers cases when microservice architecture is a good fit
 date:   2023-01-10 16:14:33 +0100
 tags: microservices opinion architecture
 series: microservice-architecture
-series-description: In this post I'll cover some cases when I think microservices are a good fit for a project...
+series_description: In this post I'll cover some cases when I think microservices are a good fit for a project...
 example:
 ---
 
