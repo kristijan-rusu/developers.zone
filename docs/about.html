@@ -3,32 +3,114 @@ layout: default
 ---
 
 <section class="post">
-  <div class="flex-row-between">
-      <a href="{{ site.url }}{{ site.baseurl }}/">« Home</a>
-    <button title="Change theme" id="theme-toggle" onclick="modeSwitcher()">
-      <div></div>
-    </button>
-  </div>
+    <div class="flex-row-between">
+        <a href="{{ site.url }}{{ site.baseurl }}/">« Home</a>
+        <button title="Change theme" id="theme-toggle" onclick="modeSwitcher()">
+            <div></div>
+        </button>
+    </div>
+    <div style="margin-top: 3rem; margin-bottom: 0;"></div>
+
+    <h1 class="title">What is developers.zone</h1>
+    <p>
+        <b><a style="color: unset" href="{{ site.url }}">developers.zone</a></b> is a personal tech blog by me, mostly about Java and software engineering which will cover
+        topics ranging from basic Java to architectures and personal opinions. It contains posts that may be interesting for beginners and experienced software developers alike.
+    </p>
+
+    <h1 class="title">Who am I?</h1>
+    <p>
+        I am <b>Kristijan Rusu</b>, a software engineer working on high-performance, scalable and mission-critical applications. I have more than five years experience with tight
+        performance and stability requirements on high-load applications in the sports betting domain. What's interesting about me is that I started in IT with QA internship, but
+        you can check my experience here:
+    </p>
+    <ul style="margin-bottom: 0;">
+        <li>February 2020 and onwards - Senior Backend Software Engineer <a href="https://singular.uk/">@Singular</a></li>
+        <li>April 2019 - Intermediate Backend Software Engineer <a href="https://singular.uk/">@Singular</a></li>
+        <li>January 2019 - Junior Backend Software Engineer <a href="https://singular.uk/">@Singular</a></li>
+        <li>March 2018 - Intermediate Automation Quality Assurance Engineer <a href="https://singular.uk/">@Singular</a></li>
+        <li>November 2017 - Junior Automation Quality Assurance Engineer <a href="https://singular.uk/">@Singular</a></li>
+        <li>August 2017 - Junior Quality Assurance Engineer <a href="https://singular.uk/">@Singular</a></li>
+        <li>May 2017 - Quality Assurance Engineer Intern <a href="https://singular.uk/">@Singular</a></li>
+    </ul>
+    <p>I've also written some posts for the company blog and was a speaker at a <a href="https://www.flutter.com/">Flutter International</a> technical summit in November 2022.</p>
+
+    <h1 class="title">Contact me</h1>
+    <p>
+        Feel free to contact me any time you want to chat or debate and issue, or even just to get my opinion on a topic on any of the following links:
+    </p>
+    <ul class="fa-ul" style="margin-left: 25px; margin-bottom: 0;">
+        <li><span class="fa-li"><i class="fa fa-envelope"></i></span>
+            <a href="mailto: kristijan.rusu@gmail.com">
+                kristijan.rusu@gmail.com
+            </a>
+        </li>
+        <li><span class="fa-li"><i class="fa fa-github"></i></span>
+            <a href="https://github.com/kristijan-rusu/">
+                https://github.com/kristijan-rusu/
+            </a>
+        </li>
+        <li><span class="fa-li"><i class="fa fa-linkedin"></i></span>
+            <a href="https://www.linkedin.com/in/kristijan-rusu/">
+                https://www.linkedin.com/in/kristijan-rusu/
+            </a>
+        </li>
+        <li><span class="fa-li"><i class="fa fa-stack-overflow"></i></span>
+            <a href="https://meta.stackoverflow.com/users/2233081/kristijan-rusu">
+                https://meta.stackoverflow.com/users/2233081
+            </a>
+        </li>
+    </ul>
+    <p style="margin-bottom: 0;"></p>
+    <h1 class="title">Some of my recent content</h1>
+    <p style="margin-bottom: 0;"></p>
+    <ul style="margin-bottom: 0;">
+        {% assign latest = site.posts | slice: 0, 5 %}
+        {% for post in latest %}
+        <li>
+            <div style="align-items: center; display: flex; justify-content: space-between;">
+                <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}"
+                   style="display: inline-block; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; width: fit-content;">
+                    {{ post.title }}
+                </a>
+                <time datetime="{{ post.date | date_to_xmlschema }}" style="overflow: visible;display: inline-block;white-space: nowrap;">
+                    {{ post.date | date: "%b %d, %Y" }}
+                </time>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
 </section>
 
-<section>
-    <!-- The Timeline -->
 
+<section style="display: none; margin: 0; padding: 0; font-size: 112.5%; line-height: 1.6em;">
     <ul class="timeline">
+
+        <li>
+            <div class="direction-l">
+                <div class="flag-wrapper">
+                    <p class="flag">
+                        QA Engineer
+                        <br/>
+                        Intermediate Automation
+                    </p>
+                    <span class="time-wrapper"><span class="time">2018 March - 2018 December</span></span>
+                </div>
+                <div class="desc">My first employer. All the stuff I've learned and projects I've been working on.</div>
+            </div>
+        </li>
 
         <!-- Item 1 -->
         <li>
             <div class="direction-r">
                 <div class="flag-wrapper">
-                    <span class="flag">Freelance</span>
-                    <span class="time-wrapper"><span class="time">2010 - 2016</span></span>
+                    <p class="flag">
+                        QA Engineer
+                        <br/>
+                        Automation Junior
+                    </p>
+                    <span class="time-wrapper"><span class="time">2017 November - 2018 February</span></span>
                 </div>
-                <div class="desc">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                    ut labore et dolore magna aliqua. Convallis convallis tellus id interdum. A lacus 
-                    vestibulum sed arcu non odio euismod lacinia. Orci a scelerisque purus semper eget duis. 
-                    Læs mere: <a href="https://tristanwhite.info" target="_top">https://tristanwhite.info</a>
-                </div>
+                <div class="desc">My current employment. Way better than the position before!</div>
             </div>
         </li>
 
@@ -36,17 +118,14 @@ layout: default
         <li>
             <div class="direction-l">
                 <div class="flag-wrapper">
-                    <span class="flag">Rundhøjskolen</span>
-                    <span class="time-wrapper"><span class="time">2013 - 2016</span></span>
+                    <p class="flag">
+                        QA Engineer
+                        <br/>
+                        Junior
+                    </p>
+                    <span class="time-wrapper"><span class="time">2017 August - 2017 October</span></span>
                 </div>
-                <div class="desc">
-                    Som <strong>IT-vejleder</strong> in metus vulputate eu scelerisque felis imperdiet. 
-                    Eget nunc scelerisque viverra mauris in. Quis imperdiet massa tincidunt nunc pulvinar sapien et. 
-                    Diam ut venenatis tellus in metus. Nisi porta lorem mollis aliquam ut porttitor leo a. Proin 
-                    sagittis nisl rhoncus mattis. Velit dignissim sodales ut eu sem integer vitae justo. Interdum 
-                    velit laoreet id donec ultrices tincidunt. Donec ultrices tincidunt arcu non sodales. 
-                    Lectus urna duis convallis convallis tellus. 
-                </div>
+                <div class="desc">My first employer. All the stuff I've learned and projects I've been working on.</div>
             </div>
         </li>
 
@@ -54,40 +133,28 @@ layout: default
         <li>
             <div class="direction-r">
                 <div class="flag-wrapper">
-                    <span class="flag">Serverhosting A/S</span>
-                    <span class="time-wrapper"><span class="time">2012</span></span>
+                    <p class="flag">
+                        QA Engineer
+                        <br/>
+                        Intern
+                    </p>
+                    <span class="time-wrapper"><span class="time">2017 May - 2017 July</span></span>
                 </div>
-                <div class="desc">
-                    Cras semper auctor neque vitae tempus quam pellentesque. Tempor orci dapibus ultrices
-                    in iaculis nunc sed augue. Urna porttitor rhoncus dolor purus non. 
-                </div>
-            </div>
-        </li>
-
-
-        <!-- Item 4 -->
-        <li>
-            <div class="direction-l">
-                <div class="flag-wrapper">
-                    <span class="flag">IT-teknolog</span>
-                    <span class="time-wrapper"><span class="time">2010 - 2012</span></span>
-                </div>
-                <div class="desc">
-                    Works well on mobile too! Try to scale down the window if you're on a pc
-                </div>
+                <div class="desc"><p>A description of all the lectures and courses I have taken and my final degree?
+                </p></div>
+                <div class="desc">Automation test</div>
             </div>
         </li>
 
     </ul>
 
-<!-- adding an empty line to separate the social profile links -->
-  <br></br>
-  <br></br>
-  <br></br>
+    <!-- adding an empty line to separate the social profile links -->
+    <br></br>
+    <br></br>
+    <br></br>
 </section>
 
 
-
 <section>
-  <nav class="post-nav" /nav>
+    <nav class="post-nav"/>
 </section>
