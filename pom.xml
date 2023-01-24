@@ -1,0 +1,59 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>zone.developer</groupId>
+    <artifactId>developer-zone</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>developer.zone</name>
+    <description></description>
+    <url>https://github.com/kristijan-rusu/developers.zone</url>
+    <inceptionYear>2022</inceptionYear>
+    <licenses>
+        <license>
+            <name>GNU AGPLv3</name>
+            <url>https://www.gnu.org/licenses/agpl-3.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <id>kristijan.rusu</id>
+            <name>Kristijan Rusu</name>
+            <email>kristijan.rusu@gmail.com</email>
+            <url>https://developers.zone</url>
+            <roles>
+                <role>architect</role>
+                <role>developer</role>
+                <role>engineer</role>
+            </roles>
+            <timezone>Europe/Vienna</timezone>
+        </developer>
+    </developers>
+
+    <issueManagement>
+        <system>GitHub</system>
+        <url>https://github.com/kristijan-rusu/developers.zone/issues</url>
+    </issueManagement>
+    <scm>
+        <connection>scm:git:https://github.com/kristijan-rusu/developers.zone.git</connection>
+        <developerConnection>scm:git:https://github.com/kristijan-rusu/developers.zone.git</developerConnection>
+        <tag>HEAD</tag>
+        <url>https://github.com/kristijan-rusu/developers.zone</url>
+    </scm>
+    <prerequisites>
+        <maven>3.6.0</maven>
+    </prerequisites>
+
+    <distributionManagement>
+        <downloadUrl>https://github.com/kristijan-rusu/developers.zone</downloadUrl>
+        <status>none</status>
+    </distributionManagement>
+
+    <properties></properties>
+
+
+    <build></build>
+    <reporting></reporting>
+</project>

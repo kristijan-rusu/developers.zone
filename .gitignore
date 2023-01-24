@@ -8,3 +8,8 @@ docs/.jekyll-metadata
 
 .idea/
 docs.iml
+
+**/target/
+**/.settings/
+**/.project
+**/.classpath

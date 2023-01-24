@@ -4,7 +4,7 @@ greetings: developers.zone
 description: >-
   personal tech blog of Kristijan Rusu
 lang: en-US
-timezone: Europe/Skopje
+timezone: Europe/Vienna
 repo: https://github.com/kristijan-rusu/developers.zone # site repo [optional]
 data-theme: light # default theme "dark" | "light"
 discus-identifier:
